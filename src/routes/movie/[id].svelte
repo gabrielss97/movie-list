@@ -17,24 +17,24 @@
 	const {
 		title,
 		overview,
-		poster_path,
 		release_date,
 		vote_average,
 		budget,
 		runtime,
-        backdrop_path
+		backdrop_path
 	} = movieDetail;
 </script>
 
 <div class="movie-details">
 	<div class="img-container">
-		<img src={`https://image.tmdb.org/t/p/w1280` +  backdrop_path} alt={title} />
+		<img src={`https://image.tmdb.org/t/p/w1280` + backdrop_path} alt={title} />
 	</div>
 	<div class="txt-container">
 		<h1>{title}</h1>
 		<p class="overview">
-            <span>Overview:</span>
-            {overview}</p>
+			<span>Overview:</span>
+			{overview}
+		</p>
 		<p>
 			<span>Release Date:</span>
 			{release_date} <br />
@@ -58,22 +58,19 @@
 		margin-bottom: 2rem;
 	}
 
-	.txt-container {
-	}
-
 	h1 {
 		text-align: center;
 		margin-bottom: 1rem;
 	}
 
-    p {
-        margin-bottom: .5rem;
-    }
+	p {
+		margin-bottom: 0.5rem;
+	}
 
-    span {
-        font-weight: bold;
-        line-height: 1.8rem;
-    }
+	span {
+		font-weight: bold;
+		line-height: 1.8rem;
+	}
 
 	img {
 		width: 100%;

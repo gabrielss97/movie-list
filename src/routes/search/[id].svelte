@@ -14,6 +14,7 @@
 
 <script>
 	import MovieCard from '../../components/MovieCard.svelte';
+	import SearchMovies from '../../components/SearchMovies.svelte';
 	export let searchedMovie;
 </script>
 
@@ -24,20 +25,11 @@
 </div>
 
 <style>
-    .searched-movies {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-column-gap: 2.5rem;
-        grid-row-gap: 2rem;
-        transform: translateY(-200px);
-        animation: dropdown .8s ease-out forwards;
-        opacity: 0;
-    }
+	.searched-movies {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-column-gap: 2.5rem;
+		grid-row-gap: 2rem;
+	}
 
-    @keyframes dropdown {
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
 </style>

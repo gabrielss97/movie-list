@@ -19,12 +19,30 @@
 <script>
 	import PopularMovies from '../components/PopularMovies.svelte';
 	import SearchMovies from '../components/SearchMovies.svelte';
-	export let movies;
+	import { fly } from 'svelte/transition'
+    export let movies;
+
 </script>
 
 <!-- --------------------------- HTML------------------------- -->
 
-<section>
+<section  out:fly={{ duration:500}}>
+    <!-- in:fly={{y:200, duration: 500}} -->
 	<SearchMovies />
 	<PopularMovies {movies} />
 </section>
+
+<style>
+    section {
+        opacity: 0;
+        transform: translateY(-200px);
+        animation: fadein .5s ease-out forwards;
+    }
+
+    @keyframes fadein {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
