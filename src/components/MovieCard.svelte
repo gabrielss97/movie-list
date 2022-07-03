@@ -7,7 +7,7 @@
 <!-- HTML  -->
 
 <div class="movie-card">
-	<a href={'/movie/' + id}>
+	<a sveltekit:prefetch sveltekit:noscroll href={'/movie/' + id}>
 		<img src={`https://image.tmdb.org/t/p/w500` + poster_path} alt={title} />
 		<div class="description">
 			<h2>{title}</h2>
