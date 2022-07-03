@@ -1,8 +1,7 @@
 <script>
 	export let movie;
 
-	const { title, overview, popularity, poster_path, release_date, vote_average, vote_count, id } =
-		movie;
+	const { title, poster_path, release_date, id } = movie;
 </script>
 
 <!-- HTML  -->
@@ -26,9 +25,9 @@
 		border-radius: 1rem;
 	}
 
-    a {
-        text-decoration: none;
-    }
+	a {
+		text-decoration: none;
+	}
 
 	h2 {
 		padding: 1rem 0 0.5rem;
